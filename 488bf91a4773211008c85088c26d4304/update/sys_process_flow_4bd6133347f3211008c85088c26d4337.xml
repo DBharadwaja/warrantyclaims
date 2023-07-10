@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_process_flow">
+    <sys_process_flow action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_976837_warrant_0_claims">u_c_status=Rejected^ORu_c_status=Approved^EQ<item endquery="false" field="u_c_status" goto="false" newquery="false" operator="=" or="false" value="Rejected"/>
+            <item endquery="false" field="u_c_status" goto="false" newquery="false" operator="=" or="true" value="Approved"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <description><![CDATA[<p>Completed Condition for Warranty Claims based on Approve/Reject.</p>]]></description>
+        <label>Complete</label>
+        <name>Complete</name>
+        <order>500</order>
+        <sys_class_name>sys_process_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-10 05:17:36</sys_created_on>
+        <sys_id>4bd6133347f3211008c85088c26d4337</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Complete</sys_name>
+        <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
+        <sys_update_name>sys_process_flow_4bd6133347f3211008c85088c26d4337</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-10 05:17:36</sys_updated_on>
+        <table>x_976837_warrant_0_claims</table>
+    </sys_process_flow>
+</record_update>

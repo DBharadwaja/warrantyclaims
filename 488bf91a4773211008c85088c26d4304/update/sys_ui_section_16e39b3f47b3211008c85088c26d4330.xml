@@ -1,5 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="" section_id="16e39b3f47b3211008c85088c26d4330" sys_domain="global" table="x_976837_warrant_0_total_amount" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>claim_id</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-07-10 08:15:29</sys_created_on>
+            <sys_id>81cf3f7f4777211008c85088c26d4375</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_976837_warrant_0_total_amount" sys_domain="global" view="Default view">16e39b3f47b3211008c85088c26d4330</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-07-10 08:15:29</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-07-10 08:15:29</sys_created_on>
+            <sys_id>05cf3f7f4777211008c85088c26d4375</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_976837_warrant_0_total_amount" sys_domain="global" view="Default view">16e39b3f47b3211008c85088c26d4330</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-07-10 08:15:29</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_totalpartsamount</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-07-10 08:15:29</sys_created_on>
+            <sys_id>85cf3f7f4777211008c85088c26d4375</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_976837_warrant_0_total_amount" sys_domain="global" view="Default view">16e39b3f47b3211008c85088c26d4330</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-07-10 08:15:29</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_totallabouramount</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-07-10 08:15:29</sys_created_on>
+            <sys_id>09cf3f7f4777211008c85088c26d4375</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_976837_warrant_0_total_amount" sys_domain="global" view="Default view">16e39b3f47b3211008c85088c26d4330</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-07-10 08:15:29</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_totalothercharges</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-07-10 08:15:29</sys_created_on>
+            <sys_id>89cf3f7f4777211008c85088c26d4375</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_976837_warrant_0_total_amount" sys_domain="global" view="Default view">16e39b3f47b3211008c85088c26d4330</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-07-10 08:15:29</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_totalclaimedamount</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-07-10 08:15:29</sys_created_on>
+            <sys_id>0dcf3f7f4777211008c85088c26d4375</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_976837_warrant_0_total_amount" sys_domain="global" view="Default view">16e39b3f47b3211008c85088c26d4330</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-07-10 08:15:29</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_tax</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-07-10 08:15:29</sys_created_on>
+            <sys_id>8dcf3f7f4777211008c85088c26d4375</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_976837_warrant_0_total_amount" sys_domain="global" view="Default view">16e39b3f47b3211008c85088c26d4330</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-07-10 08:15:29</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_finalclaimedamount</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-07-10 08:15:29</sys_created_on>
+            <sys_id>01cf3f7f4777211008c85088c26d4376</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_976837_warrant_0_total_amount" sys_domain="global" view="Default view">16e39b3f47b3211008c85088c26d4330</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-07-10 08:15:29</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>

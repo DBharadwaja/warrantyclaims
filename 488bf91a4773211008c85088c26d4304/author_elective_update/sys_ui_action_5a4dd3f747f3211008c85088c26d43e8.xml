@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="DELETE">
+        <action_name/>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2/>
+        <comments/>
+        <condition/>
+        <form_action>false</form_action>
+        <form_button>false</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name/>
+        <onclick/>
+        <order>100</order>
+        <script/>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-10 05:44:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5a4dd3f747f3211008c85088c26d43e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
+        <sys_update_name>sys_ui_action_5a4dd3f747f3211008c85088c26d43e8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-10 05:44:54</sys_updated_on>
+        <table>x_976837_warrant_0_claims</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</application>
+        <file_path/>
+        <instance_id>0a5566f9db0ba410c6e711f8489619c6</instance_id>
+        <instance_name>dev108011</instance_name>
+        <name>sys_ui_action_5a4dd3f747f3211008c85088c26d43e8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action"><sys_ui_action action="INSERT_OR_UPDATE"><action_name/><active>true</active><client>false</client><client_script_v2/><comments/><condition/><form_action>false</form_action><form_button>false</form_button><form_button_v2>false</form_button_v2><form_context_menu>false</form_context_menu><form_link>false</form_link><form_menu_button_v2>false</form_menu_button_v2><form_style/><format_for_configurable_workspace>false</format_for_configurable_workspace><hint/><isolate_script>false</isolate_script><list_action>false</list_action><list_banner_button>false</list_banner_button><list_button>false</list_button><list_choice>false</list_choice><list_context_menu>false</list_context_menu><list_link>false</list_link><list_save_with_form_button>false</list_save_with_form_button><list_style/><messages/><name/><onclick/><order>100</order><script/><show_insert>true</show_insert><show_multiple_update>false</show_multiple_update><show_query>false</show_query><show_update>true</show_update><sys_class_name>sys_ui_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-07-10 05:44:54</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>5a4dd3f747f3211008c85088c26d43e8</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package><sys_policy/><sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope><sys_update_name>sys_ui_action_5a4dd3f747f3211008c85088c26d43e8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-07-10 05:44:54</sys_updated_on><table>x_976837_warrant_0_claims</table><ui11_compatible>true</ui11_compatible><ui16_compatible>false</ui16_compatible></sys_ui_action></record_update>]]></payload>
+        <payload_hash>-1260839146</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>5581977b47b3211008c85088c26d43ab</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-10 05:44:54</sys_created_on>
+        <sys_id>cb4d1fb747f3211008c85088c26d4348</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1893e54d6620000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-10 05:44:54</sys_updated_on>
+        <type>UI Action</type>
+        <update_guid>034d1fb78ef32110ce8d8fc1b75fe448</update_guid>
+        <update_guid_history>034d1fb78ef32110ce8d8fc1b75fe448:-1260839146</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-10 05:46:26</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_action">sys_ui_action</sys_db_object>
+        <sys_id>22a70a2356714db589f30f83377b1291</sys_id>
+        <sys_metadata>5a4dd3f747f3211008c85088c26d43e8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
+        <sys_parent display_value="Warranty Claims">4efcb19a4773211008c85088c26d43b9</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
+        <sys_scope_delete display_value="">03b44be4edf34a389289e20b091d72c1</sys_scope_delete>
+        <sys_update_name>sys_ui_action_5a4dd3f747f3211008c85088c26d43e8</sys_update_name>
+        <sys_update_version display_value="sys_ui_action_5a4dd3f747f3211008c85088c26d43e8">cb4d1fb747f3211008c85088c26d4348</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-10 05:46:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

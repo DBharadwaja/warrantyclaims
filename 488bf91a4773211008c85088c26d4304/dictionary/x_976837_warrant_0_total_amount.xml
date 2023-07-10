@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="a2d3973f47b3211008c85088c26d43f8" label="Total Amount" max_length="40" name="x_976837_warrant_0_total_amount" type="collection">
-        <element label="Claim Id" max_length="32" name="claim_id" reference="x_976837_warrant_0_claims" type="reference"/>
+        <element label="Claim Id" max_length="32" name="claim_id" read_only="true" reference="x_976837_warrant_0_claims" type="reference"/>
+        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Final Claimed Amount" max_length="20" name="u_finalclaimedamount" type="price"/>
+        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Tax" max_length="20" name="u_tax" type="price"/>
+        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Total Claimed Amount" max_length="20" name="u_totalclaimedamount" type="price"/>
+        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Total Labour Amount" max_length="20" name="u_totallabouramount" type="price"/>
+        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Total Other Charges" max_length="20" name="u_totalothercharges" type="price"/>
+        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Total Parts Amount" max_length="20" name="u_totalpartsamount" type="price"/>
         <index name="index">
             <element name="claim_id"/>
         </index>

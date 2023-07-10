@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="b4b25fbb47b3211008c85088c26d43c0" label="Labours" max_length="40" name="x_976837_warrant_0_labours" type="collection">
-        <element label="Claim Id" max_length="32" name="claim_id" reference="x_976837_warrant_0_claims" type="reference"/>
+        <element label="Claim Id" max_length="32" name="claim_id" read_only="true" reference="x_976837_warrant_0_claims" type="reference"/>
+        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Claim Amount" max_length="20" name="u_claim_amount" type="price"/>
+        <element label="Hours Claimed" max_length="40" name="u_hours_claimed" type="integer"/>
+        <element attributes="encode_utf8=false" label="SRT Code" max_length="32" name="u_ratetype" reference="rate_type" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="SRT Description" max_length="40" name="u_srt_description" type="string"/>
         <index name="index">
             <element name="claim_id"/>
+        </index>
+        <index name="index2">
+            <element name="u_ratetype"/>
         </index>
     </element>
 </database>

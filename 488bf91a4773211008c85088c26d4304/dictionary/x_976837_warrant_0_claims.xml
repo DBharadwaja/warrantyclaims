@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="4efcb19a4773211008c85088c26d43b9" label="Warranty Claims" max_length="40" name="x_976837_warrant_0_claims" type="collection">
-        <element default="True" label="Active" max_length="40" name="u_active" type="boolean"/>
+        <element default="true" label="Active" max_length="40" name="u_active" type="boolean"/>
         <element attributes="edge_encryption_enabled=true" default="javascript:getNextObjNumberPadded();" display="true" dynamic_default_value="fdcb83a85f220100a9ad2572f2b4773c" label="Claim Id" max_length="40" name="u_claim_id" type="string" use_dynamic_default="true"/>
         <element label="Component Code" max_length="40" name="u_component_code" type="string"/>
         <element label="Customer Name" max_length="40" name="u_customer_name" read_only="true" type="string"/>
