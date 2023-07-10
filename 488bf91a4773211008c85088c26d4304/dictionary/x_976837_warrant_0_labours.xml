@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="b4b25fbb47b3211008c85088c26d43c0" label="Labours" max_length="40" name="x_976837_warrant_0_labours" type="collection">
+        <element label="Claim Id" max_length="32" name="claim_id" reference="x_976837_warrant_0_claims" type="reference"/>
+        <index name="index">
+            <element name="claim_id"/>
+        </index>
+    </element>
+</database>

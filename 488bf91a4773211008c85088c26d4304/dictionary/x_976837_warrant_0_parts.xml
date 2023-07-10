@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="ed81977b47b3211008c85088c26d43b1" label="Parts" max_length="40" name="x_976837_warrant_0_parts" type="collection">
+        <element label="Claim Id" max_length="32" name="claim_id" reference="x_976837_warrant_0_claims" type="reference"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element label="Work order task" max_length="32" name="work_order_task" reference="x_976837_warrant_0_claims" type="reference"/>
+        <index name="index">
+            <element name="claim_id"/>
+        </index>
+        <index name="index2">
+            <element name="sys_class_name"/>
+        </index>
+        <index name="index3">
+            <element name="work_order_task"/>
+        </index>
+    </element>
+</database>
