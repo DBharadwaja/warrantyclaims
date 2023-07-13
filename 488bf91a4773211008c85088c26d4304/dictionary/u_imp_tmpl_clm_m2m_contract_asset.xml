@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="d869f3cc4744711008c85088c26d4358" extends="sys_import_set_row" label="Imp Tmpl Clm M2m Contract Asset" max_length="40" name="u_imp_tmpl_clm_m2m_contract_asset" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Asset" label="Asset" max_length="32" name="u_asset" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Contract" label="Contract" max_length="32" name="u_contract" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Date added" label="Date added" max_length="40" name="u_date_added" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Date removed" label="Date removed" max_length="40" name="u_date_removed" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Location" label="Location" max_length="40" name="u_location" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=State" label="State" max_length="40" name="u_state" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Tags" label="Tags" max_length="40" name="u_tags" type="string"/>
+    </element>
+</database>
