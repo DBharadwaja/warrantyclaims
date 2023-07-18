@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-18 08:24:23</sys_created_on>
+        <sys_id>097e05aa4704311008c85088c26d43da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_976837_warrant_0.oem manager</sys_name>
+        <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
+        <sys_security_acl display_value="">755ec96a4704311008c85088c26d4377</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_097e05aa4704311008c85088c26d43da</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-18 08:24:23</sys_updated_on>
+        <sys_user_role display_value="x_976837_warrant_0.oem manager" name="x_976837_warrant_0.oem manager">188bf91a4773211008c85088c26d430a</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</application>
+        <file_path/>
+        <instance_id>0a5566f9db0ba410c6e711f8489619c6</instance_id>
+        <instance_name>dev108011</instance_name>
+        <name>sys_security_acl_role_097e05aa4704311008c85088c26d43da</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-07-18 08:24:23</sys_created_on><sys_id>097e05aa4704311008c85088c26d43da</sys_id><sys_mod_count>0</sys_mod_count><sys_name>.x_976837_warrant_0.oem manager</sys_name><sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package><sys_policy/><sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope><sys_security_acl display_value="">755ec96a4704311008c85088c26d4377</sys_security_acl><sys_update_name>sys_security_acl_role_097e05aa4704311008c85088c26d43da</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-07-18 08:24:23</sys_updated_on><sys_user_role display_value="x_976837_warrant_0.oem manager" name="x_976837_warrant_0.oem manager">188bf91a4773211008c85088c26d430a</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>-2008850664</payload_hash>
+        <record_name>.x_976837_warrant_0.oem manager</record_name>
+        <reverted_from/>
+        <source>5581977b47b3211008c85088c26d43ab</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-18 08:24:23</sys_created_on>
+        <sys_id>018e45aa4704311008c85088c26d4313</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1896819b8870000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-18 08:24:23</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>458e45aa30043110b0f48dc57fb2a412</update_guid>
+        <update_guid_history>458e45aa30043110b0f48dc57fb2a412:-2008850664</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value=".x_976837_warrant_0.oem manager">80d9312e47c4311008c85088c26d4320</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-18 11:33:32</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>07f73212f6e24790a69f6d3acc2e2f44</sys_id>
+        <sys_metadata>097e05aa4704311008c85088c26d43da</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_976837_warrant_0.oem manager</sys_name>
+        <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
+        <sys_parent display_value="">755ec96a4704311008c85088c26d4377</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
+        <sys_scope_delete display_value="">03b44be4edf34a389289e20b091d72c1</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_097e05aa4704311008c85088c26d43da</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_097e05aa4704311008c85088c26d43da">018e45aa4704311008c85088c26d4313</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-18 11:33:32</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

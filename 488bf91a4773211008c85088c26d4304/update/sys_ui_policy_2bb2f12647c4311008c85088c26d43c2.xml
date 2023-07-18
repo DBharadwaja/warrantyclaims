@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <conditions/>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+    var x = g_form.getReference('u_wm_ordertask');
+    if (x.under_warranty == "true") {
+        // g_form.showRelatedList('sm_asset_usage');
+        g_form.showRelatedLists();		
+    }
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+    var x = g_form.getReference('u_wm_ordertask');
+    if (x.under_warranty == "false") {
+        // g_form.hideRelatedList('sm_asset_usage');
+        g_form.hideRelatedLists();
+		//reviewtotalamount
+//         g_form.hideRelatedList('u_mfg_parts.u_claim_id');
+//         var sections = g_form.getSections('u_mfg_parts');
+//         var summary = sections[0]; //you have to catch the right section here
+//         summary.style.display = 'block';
+    }
+}]]></script_true>
+        <set_values/>
+        <short_description>hide relative list of parts </short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-18 11:04:04</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2bb2f12647c4311008c85088c26d43c2</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>hide relative list of parts </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
+        <sys_update_name>sys_ui_policy_2bb2f12647c4311008c85088c26d43c2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-18 11:45:00</sys_updated_on>
+        <table>x_976837_warrant_0_claims</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>

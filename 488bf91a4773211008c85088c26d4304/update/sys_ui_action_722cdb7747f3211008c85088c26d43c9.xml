@@ -32,8 +32,8 @@
         <order>100</order>
         <script><![CDATA[var sysid = current.sys_id;
 // gs.addInfoMessage(sysid);
-var parts = new GlideRecord('u_mfg_parts');
-parts.addQuery('u_claim_id', sysid);
+var parts = new GlideRecord('x_976837_warrant_0_parts');
+parts.addQuery('claim_id', sysid);
 parts.query();
 while (parts.next()) {
     var qltpart = parts.u_partsquantity;
@@ -43,11 +43,11 @@ while (parts.next()) {
     //     gs.addInfoMessage(parts_total);
 }
 
-var labour = new GlideRecord('u_mfg_labours');
-labour.addQuery('u_claim_id', sysid);
+var labour = new GlideRecord('x_976837_warrant_0_labours');
+labour.addQuery('claim_id', sysid);
 labour.query();
 while (labour.next()) {
-    var lab_quantity = labour.u_hoursclaimed;
+    var lab_quantity = labour.u_hours_claimed;
     var lab_claimamount = labour.u_claim_amount;
 	
     var lab_total = parseInt(lab_claimamount);
@@ -56,8 +56,8 @@ while (labour.next()) {
     //     gs.addErrorMessage(lab_total);
 }
 
-var other = new GlideRecord('u_mgf_other_charges');
-other.addQuery('u_claim_id', sysid);
+var other = new GlideRecord('x_976837_warrant_0_other_charges');
+other.addQuery('claim_id', sysid);
 other.query();
 while (other.next()) {
     var other_claims = other.u_claim_amount;
@@ -66,19 +66,19 @@ while (other.next()) {
 }
 var alltotals = parts_total + lab_total + totalother_claim;
 
-var totalclaims = new GlideRecord('u_mfg_total_amount');
-totalclaims.addQuery('u_claim_id', sysid);
+var totalclaims = new GlideRecord('x_976837_warrant_0_total_amount');
+totalclaims.addQuery('claim_id', sysid);
 totalclaims.query();
 if (totalclaims.getRowCount() > 0) {
-    var total_1 = new GlideRecord('u_mfg_total_amount');
-    total_1.addQuery('u_claim_id', sysid);
+    var total_1 = new GlideRecord('x_976837_warrant_0_total_amount');
+    total_1.addQuery('claim_id', sysid);
     total_1.query();
     total_1.next();
 	var taxtotal_1 = parseInt(total_1.u_tax);
 // 	gs.addInfoMessage(taxtotal_1);
     total_1.deleteRecord();
     totalclaims.initialize();
-    totalclaims.u_claim_id = sysid;
+    totalclaims.claim_id = sysid;
     totalclaims.u_totalpartsamount = parts_total;
     totalclaims.u_totallabouramount = lab_total;
     totalclaims.u_totalothercharges = other_claims;
@@ -90,7 +90,7 @@ if (totalclaims.getRowCount() > 0) {
 } else {
     totalclaims.initialize();
 	totalclaims.u_finalclaimedamount = alltotals;
-    totalclaims.u_claim_id = sysid;
+    totalclaims.claim_id = sysid;
     totalclaims.u_totalpartsamount = parts_total;
     totalclaims.u_totallabouramount = lab_total;
     totalclaims.u_totalothercharges = other_claims;
@@ -111,7 +111,7 @@ if (typeof window == 'undefined')
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>722cdb7747f3211008c85088c26d43c9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Review Total Amount</sys_name>
         <sys_overrides/>
         <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
@@ -119,7 +119,7 @@ if (typeof window == 'undefined')
         <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
         <sys_update_name>sys_ui_action_722cdb7747f3211008c85088c26d43c9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-10 05:40:38</sys_updated_on>
+        <sys_updated_on>2023-07-18 09:31:58</sys_updated_on>
         <table>x_976837_warrant_0_claims</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

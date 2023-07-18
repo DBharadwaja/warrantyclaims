@@ -5,7 +5,7 @@
         <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Claim Amount" max_length="20" name="u_claim_amount" type="price"/>
         <element attributes="encode_utf8=false" dependent="work_order_task" dependent_on_field="work_order_task" label="Parts" max_length="32" name="u_partsasset" reference="sm_asset_usage" type="reference" use_dependent_field="true"/>
         <element label="Quantity" mandatory="true" max_length="40" name="u_partsquantity" type="integer"/>
-        <element label="Work order task" max_length="32" name="work_order_task" reference="x_976837_warrant_0_claims" type="reference"/>
+        <element label="Work order task" max_length="32" name="work_order_task" read_only="true" reference="x_976837_warrant_0_claims" type="reference"/>
         <index name="index">
             <element name="claim_id"/>
         </index>
