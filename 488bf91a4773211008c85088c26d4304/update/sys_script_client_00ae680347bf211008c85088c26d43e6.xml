@@ -14,7 +14,7 @@
     if (isLoading || newValue === '') {
         return;
     }
-    var worder = g_form.getValue('u_wm_order');
+        var worder = g_form.getValue('u_wm_order');
 
     var pc = new GlideAjax('autopopcompound');
     pc.addParam('sysparm_name', 'companyname'); // call the function
@@ -24,16 +24,17 @@
     function responseParser(response) {
         var answer = response.responseXML.documentElement.getAttribute('answer');
         answer = JSON.parse(answer);
-        var company = answer["company"];
-        var failuredate = answer["failuredate"];
-        var asset = answer["asset"];
-        var componentcode = answer["componentcode"];
-// 		alert(company);
-// 		g_form.addInfoMessage(company);
-        g_form.setValue('u_customer_name', company);
-        g_form.setValue('u_failure_date', failuredate);
-        g_form.setValue('u_equipment', asset);
-		g_form.setValue('u_compound_code',componentcode);
+	// 	g_form.addErrorMessage(answer);
+    //     var company = answer["company"];
+    //     var failuredate = answer["failuredate"];
+    //     var asset = answer["asset"];
+    //     var componentcode = answer["componentcode"];
+		
+	// 	g_form.addInfoMessage(company);
+    //     g_form.setValue('u_customer_name', company);
+    //     g_form.setValue('u_failure_date', failuredate);
+    //     g_form.setValue('u_equipment', asset);
+	// 	g_form.setValue('u_component_code',componentcode);
         
     }
 }]]></script>
@@ -43,7 +44,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>00ae680347bf211008c85088c26d43e6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>auto update customer name </sys_name>
         <sys_overrides/>
         <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
@@ -51,7 +52,7 @@
         <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
         <sys_update_name>sys_script_client_00ae680347bf211008c85088c26d43e6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-07 09:07:15</sys_updated_on>
+        <sys_updated_on>2023-07-19 04:51:21</sys_updated_on>
         <table>x_976837_warrant_0_claims</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

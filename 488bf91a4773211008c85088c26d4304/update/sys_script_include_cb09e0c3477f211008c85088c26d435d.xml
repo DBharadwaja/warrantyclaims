@@ -12,26 +12,19 @@ autopopcompound.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
     companyname: function() {
         var company = this.getParameter('sysparm_company');
         var answer = {};
-        // gs.addInfoMessage(company);
         var rec = new GlideRecord('wm_order');
         rec.query();
         while (rec.next()) {
             if (company == rec.sys_id) {
-                // gs.addInfoMessage(rec.sys_id);
-                // gs.addInfoMessage(rec.company.getDisplayValue());
-				// gs.addInfoMessage(rec.opened_at);
-				// gs.addInfoMessage(rec.asset.getDisplayValue());
-				// gs.addInfoMessage(rec.asset.model_category.getDisplayValue());
-
-                answer.company = rec.company.getDisplayValue();
-                answer.failuredate = rec.opened_at.getDisplayValue();
-                answer.asset = rec.asset.toString();
-                answer.componentcode = rec.asset.model_category.getDisplayValue();
-			
-			var result = new JSON().encode(answer); // convert object to JSON string
+                gs.addInfoMessage(rec.company + rec.company.name + rec.opened_at);
+                //                 answer["company"] = rec.company.toString();
+                answer["company"] = rec.company.getDisplayValue();
+                answer["failuredate"] = rec.opened_at.getDisplayValue();
+                answer["asset"] = rec.asset.toString();
+                answer["componentcode"] = rec.asset.model_category.getDisplayValue();
             }
         }
-        return result;
+        return new JSON().encode(answer);
     },
     // Myfunc: function() {
     //     var userID = this.getParameter('sysparm_my_userid');
@@ -89,13 +82,13 @@ autopopcompound.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-07-07 08:43:09</sys_created_on>
         <sys_id>cb09e0c3477f211008c85088c26d435d</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>autopopcompound</sys_name>
         <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
         <sys_update_name>sys_script_include_cb09e0c3477f211008c85088c26d435d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-10 07:50:39</sys_updated_on>
+        <sys_updated_on>2023-07-19 04:36:36</sys_updated_on>
     </sys_script_include>
 </record_update>

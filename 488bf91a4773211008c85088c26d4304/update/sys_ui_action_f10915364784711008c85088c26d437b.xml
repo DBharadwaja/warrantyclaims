@@ -7,7 +7,7 @@
 
 }]]></client_script_v2>
         <comments/>
-        <condition>(u_claims.u_c_status == "Submitted" || u_claims.u_c_status =="Send Back") &amp;&amp; current.getTableName() == 'u_mfg_parts';</condition>
+        <condition>(u_claims.u_c_status == "Submitted" || u_claims.u_c_status =="Send Back") &amp;&amp; current.getTableName() == 'x_976837_warrant_0_labours';</condition>
         <form_action>false</form_action>
         <form_button>false</form_button>
         <form_button_v2>false</form_button_v2>
@@ -31,27 +31,27 @@
         <onclick/>
         <order>100</order>
         <script><![CDATA[var wizID = parent.sys_id;
-action.setRedirectURL('u_mfg_parts.do?sys_id=-1&sys_is_list=true&sys_is_related_list=true&sys_target=u_mfg_parts&sysparm_checked_items=&sysparm_collection=u_claims&sysparm_collectionID=' + wizID + '&sysparm_collection_key=u_claim_id&sysparm_collection_label=Parts&sysparm_collection_related_field=&sysparm_collection_related_file=&sysparm_collection_relationship=&sysparm_fixed_query=&sysparm_group_sort=&sysparm_list_css=&sysparm_query=&sysparm_referring_url=u_claims.do%3fsys_id%3d' + wizID + '%4099%40sysparm_record_rows%3d4%4099%40sysparm_record_target%3du_claims%4099%40sysparm_record_list%3dORDERBYDESCsys_updated_on%4099%40sysparm_record_row%3d1&sysparm_target=&sysparm_view=');]]></script>
+action.setRedirectURL("x_976837_warrant_0_labours.do%3Fsys_id%3D-1%26sys_is_list%3Dtrue%26sys_is_related_list%3Dtrue%26sys_target%3Dx_976837_warrant_0_labours%26sysparm_checked_items%3D%26sysparm_collection%3Dx_976837_warrant_0_claims%26sysparm_collectionID%3D"+wizID+"%26sysparm_collection_key%3Dclaim_id%26sysparm_collection_label%3DLabours%26sysparm_collection_related_field%3D%26sysparm_collection_related_file%3D%26sysparm_collection_related_relationship%3Dx_976837_warrant_0_labours.claim_id%26sysparm_collection_relationship%3D%26sysparm_fixed_query%3D%26sysparm_group_sort%3D%26sysparm_list_css%3D%26sysparm_query%3D%26sysparm_referring_url%3Dx_976837_warrant_0_claims.do%253fsys_id%253d"+wizID+"%254099%2540sysparm_record_rows%253d1%254099%2540sysparm_record_target%253dx_976837_warrant_0_claims%254099%2540sysparm_record_row%253d1%26sysparm_target%3D%26sysparm_view%3D");]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
         <show_update>true</show_update>
         <sys_class_name>sys_ui_action</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-07-13 05:08:07</sys_created_on>
+        <sys_created_on>2023-07-19 03:55:00</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>d861be7c4700311008c85088c26d430d</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_id>f10915364784711008c85088c26d437b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>New</sys_name>
         <sys_overrides/>
         <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
         <sys_policy/>
         <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
-        <sys_update_name>sys_ui_action_d861be7c4700311008c85088c26d430d</sys_update_name>
+        <sys_update_name>sys_ui_action_f10915364784711008c85088c26d437b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-19 04:06:48</sys_updated_on>
-        <table>x_976837_warrant_0_parts</table>
+        <sys_updated_on>2023-07-19 04:02:43</sys_updated_on>
+        <table>x_976837_warrant_0_labours</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
     </sys_ui_action>
