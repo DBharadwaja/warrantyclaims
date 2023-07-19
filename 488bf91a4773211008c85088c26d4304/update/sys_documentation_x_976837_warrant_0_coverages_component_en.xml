@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="" label="Coverages" language="en" table="x_976837_warrant_0_coverages">
+    <sys_documentation element="component" label="Component" language="en" table="x_976837_warrant_0_coverages">
         <sys_documentation action="INSERT_OR_UPDATE">
-            <element/>
+            <element>component</element>
             <help/>
             <hint/>
-            <label>Coverages</label>
+            <label>Component</label>
             <language>en</language>
             <name>x_976837_warrant_0_coverages</name>
-            <plural>Coverages</plural>
+            <plural>Components</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-07-19 09:49:42</sys_created_on>
+            <sys_created_on>2023-07-19 09:56:37</sys_created_on>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>Coverages</sys_name>
+            <sys_name>Component</sys_name>
             <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
             <sys_policy/>
             <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
-            <sys_update_name>sys_documentation_x_976837_warrant_0_coverages__en</sys_update_name>
+            <sys_update_name>sys_documentation_x_976837_warrant_0_coverages_component_en</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-07-19 09:49:42</sys_updated_on>
+            <sys_updated_on>2023-07-19 09:56:37</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

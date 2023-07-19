@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Auto update start date</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+    var contract = g_form.getValue('contract');
+    g_form.addErrorMessage(contract);
+    var x = new GlideRecord('ast_contract');
+    x.addQuery('sys_id', contract);
+    x.query();
+    x.next();
+    g_form.addErrorMessage('hello');
+    //     g_form.setValue('start_date', contract.starts);
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-19 10:13:22</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6cc0b2b697cc3110db91f0a0f053af1f</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>Auto update start date</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
+        <sys_update_name>sys_script_client_6cc0b2b697cc3110db91f0a0f053af1f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-19 10:54:41</sys_updated_on>
+        <table>x_976837_warrant_0_coverages</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</application>
+        <file_path/>
+        <instance_id>81447bf91b6fe1d46a85eb9b2d4bcbea</instance_id>
+        <instance_name>dev177354</instance_name>
+        <name>sys_script_client_6cc0b2b697cc3110db91f0a0f053af1f</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field/&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Auto update start date&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onLoad() {
+    var contract = g_form.getValue('contract');
+    g_form.addErrorMessage(contract);
+    var x = new GlideRecord('ast_contract');
+    x.addQuery('sys_id', contract);
+    x.query();
+    x.next();
+    g_form.addErrorMessage('hello');
+    //     g_form.setValue('start_date', contract.starts);
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-07-19 10:13:22&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;6cc0b2b697cc3110db91f0a0f053af1f&lt;/sys_id&gt;&lt;sys_mod_count&gt;18&lt;/sys_mod_count&gt;&lt;sys_name&gt;Auto update start date&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Warranty Claims" source="x_976837_warrant_0"&gt;488bf91a4773211008c85088c26d4304&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Warranty Claims"&gt;488bf91a4773211008c85088c26d4304&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_6cc0b2b697cc3110db91f0a0f053af1f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-07-19 10:54:41&lt;/sys_updated_on&gt;&lt;table&gt;x_976837_warrant_0_coverages&lt;/table&gt;&lt;type&gt;onLoad&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1062110532</payload_hash>
+        <record_name>Auto update start date</record_name>
+        <reverted_from/>
+        <source>5716aaba978c3110db91f0a0f053afb8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-19 10:54:41</sys_created_on>
+        <sys_id>9c8a767297007110db91f0a0f053af22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1896dc9adc60000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-19 10:54:41</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>948a7672e30071100105bad5d29bf222</update_guid>
+        <update_guid_history>948a7672e30071100105bad5d29bf222:-1062110532,f07af2722f0071107cd10b133b9d0d92:-1012579189,98f972725c007110ea0dc63cfa8b640d:511477997,6cd9b27208007110eafe951ee08b79de:-1906464405,bcb93e321f0071108a8046877e1b7c94:511477997,df99be3231007110ce75960d8ee3e2c0:59743502,a4797a3264007110cf2ad81ac8c99182:-1671219922,6069ba321b00711091d9c52300c8b3a9:1424498696,ffc8b6be60cc31108b0241675141761b:-1705306222,1b0836feaacc31104d055bca404556a7:-2061963994,dee7b2bec3cc3110fe081ffa514a2eb3:-1199709975,c896bebad4cc31103c208e834c38977a:1074016686,dd667e3eb5cc311018e77e8811f34aa3:2044929469,39c57a7a98cc3110dd332e4b698e2259:1074016686,1195feba95cc311043932d6e57f48c03:1794087062,eb45b67ab2cc3110ac850de0587ffff9:457222561,0fa27af668cc311073b2580900968e31:1811578311,b4627af6d7cc311073bcbab44b9994e7:-673005162,1f0172b6e4cc3110cc7000315efac2b2:-7751086</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-19 10:59:07</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>5b01212b3f754d69a5e2b420bf045d09</sys_id>
+        <sys_metadata>6cc0b2b697cc3110db91f0a0f053af1f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Auto update start date</sys_name>
+        <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
+        <sys_parent display_value="Coverages">5a57223e978c3110db91f0a0f053af27</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
+        <sys_scope_delete display_value="">03b44be4edf34a389289e20b091d72c1</sys_scope_delete>
+        <sys_update_name>sys_script_client_6cc0b2b697cc3110db91f0a0f053af1f</sys_update_name>
+        <sys_update_version display_value="sys_script_client_6cc0b2b697cc3110db91f0a0f053af1f">9c8a767297007110db91f0a0f053af22</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-19 10:59:07</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
