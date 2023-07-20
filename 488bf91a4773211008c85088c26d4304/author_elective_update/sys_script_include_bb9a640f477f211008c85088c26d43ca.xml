@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_976837_warrant_0.deals_companies</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>deals_companies</name>
+        <script><![CDATA[var deals_companies = Class.create();
+deals_companies.prototype = {
+    initialize: function() {},
+    deals_list: function() {
+        var userid = gs.getUserID();
+        // 		gs.addErrorMessage(userid);
+        var user = new GlideRecord('sys_user');
+        user.addQuery('sys_id', userid);
+        user.query();
+        dealslist = '';
+        while (user.next()) {
+            var usercompany = user.company;
+            var company = new GlideRecord('core_company');
+            company.addQuery('sys_id', usercompany);
+            company.query();
+            while (company.next()) {
+                //                 gs.addInfoMessage(company.name);
+                if (company.name != 0) {
+                    dealslist += ',' + company.sys_id;
+                }
+            }
+        }
+        return 'sys_idIN' + dealslist;
+    },
+
+
+    type: 'deals_companies'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-07 08:49:14</sys_created_on>
+        <sys_id>bb9a640f477f211008c85088c26d43ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>deals_companies</sys_name>
+        <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
+        <sys_update_name>sys_script_include_bb9a640f477f211008c85088c26d43ca</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-07 08:49:14</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</application>
+        <file_path/>
+        <instance_id>0a5566f9db0ba410c6e711f8489619c6</instance_id>
+        <instance_name>dev108011</instance_name>
+        <name>sys_script_include_bb9a640f477f211008c85088c26d43ca</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_976837_warrant_0.deals_companies&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;deals_companies&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var deals_companies = Class.create();
+deals_companies.prototype = {
+    initialize: function() {},
+    deals_list: function() {
+        var userid = gs.getUserID();
+        // 		gs.addErrorMessage(userid);
+        var user = new GlideRecord('sys_user');
+        user.addQuery('sys_id', userid);
+        user.query();
+        dealslist = '';
+        while (user.next()) {
+            var usercompany = user.company;
+            var company = new GlideRecord('core_company');
+            company.addQuery('sys_id', usercompany);
+            company.query();
+            while (company.next()) {
+                //                 gs.addInfoMessage(company.name);
+                if (company.name != 0) {
+                    dealslist += ',' + company.sys_id;
+                }
+            }
+        }
+        return 'sys_idIN' + dealslist;
+    },
+
+
+    type: 'deals_companies'
+};]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-07-07 08:49:14&lt;/sys_created_on&gt;&lt;sys_id&gt;bb9a640f477f211008c85088c26d43ca&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;deals_companies&lt;/sys_name&gt;&lt;sys_package display_value="Warranty Claims" source="x_976837_warrant_0"&gt;488bf91a4773211008c85088c26d4304&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Warranty Claims"&gt;488bf91a4773211008c85088c26d4304&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_bb9a640f477f211008c85088c26d43ca&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-07-07 08:49:14&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1902416325</payload_hash>
+        <record_name>deals_companies</record_name>
+        <reverted_from/>
+        <source>188bf91a4773211008c85088c26d4306</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-07 08:49:14</sys_created_on>
+        <sys_id>31bae40f477f211008c85088c26d437e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1892f8a86550000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-07 08:49:14</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>75bae40fde7f211085208464f4183f7d</update_guid>
+        <update_guid_history>75bae40fde7f211085208464f4183f7d:1902416325</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-20 05:01:17</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>18496d8a31cd441d9743bd2de70e3461</sys_id>
+        <sys_metadata>bb9a640f477f211008c85088c26d43ca</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>deals_companies</sys_name>
+        <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
+        <sys_scope_delete display_value="">03b44be4edf34a389289e20b091d72c1</sys_scope_delete>
+        <sys_update_name>sys_script_include_bb9a640f477f211008c85088c26d43ca</sys_update_name>
+        <sys_update_version display_value="sys_script_include_bb9a640f477f211008c85088c26d43ca">31bae40f477f211008c85088c26d437e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-20 05:01:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

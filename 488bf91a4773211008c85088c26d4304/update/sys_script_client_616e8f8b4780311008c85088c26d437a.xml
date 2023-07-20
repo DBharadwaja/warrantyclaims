@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_hours_claimed</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>calculate the amount</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+    var srtcode = g_form.getValue('u_ratetype');
+	var claimshours = g_form.getDecimalValue('u_hours_claimed');
+    var pc = new GlideAjax('srtcode');
+    pc.addParam('sysparm_name', 'srtrate'); // call the function
+    pc.addParam('sysparm_ratecard', srtcode); // pass in userID
+    pc.getXML(responseParser);
+
+    function responseParser(response) {
+        var answer = response.responseXML.documentElement.getAttribute('answer');
+		var x = answer * claimshours;
+		g_form.setValue('u_claim_amount', x.toString());
+    }
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-20 07:01:08</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>616e8f8b4780311008c85088c26d437a</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>calculate the amount</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
+        <sys_update_name>sys_script_client_616e8f8b4780311008c85088c26d437a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-20 07:20:14</sys_updated_on>
+        <table>x_976837_warrant_0_labours</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

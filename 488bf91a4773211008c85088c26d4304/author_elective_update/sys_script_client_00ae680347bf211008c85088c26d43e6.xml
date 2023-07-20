@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_wm_order</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>auto update customer name </name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+        var worder = g_form.getValue('u_wm_order');
+
+    var pc = new GlideAjax('autopopcompound');
+    pc.addParam('sysparm_name', 'companyname'); // call the function
+    pc.addParam('sysparm_company', worder); // pass in userID
+    pc.getXML(responseParser);
+
+    function responseParser(response) {
+        var answer = response.responseXML.documentElement.getAttribute('answer');
+        answer = JSON.parse(answer);
+	// 	g_form.addErrorMessage(answer);
+    //     var company = answer["company"];
+    //     var failuredate = answer["failuredate"];
+    //     var asset = answer["asset"];
+    //     var componentcode = answer["componentcode"];
+		
+	// 	g_form.addInfoMessage(company);
+    //     g_form.setValue('u_customer_name', company);
+    //     g_form.setValue('u_failure_date', failuredate);
+    //     g_form.setValue('u_equipment', asset);
+	// 	g_form.setValue('u_component_code',componentcode);
+        
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-07 09:07:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>00ae680347bf211008c85088c26d43e6</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name>auto update customer name </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
+        <sys_update_name>sys_script_client_00ae680347bf211008c85088c26d43e6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-19 04:51:21</sys_updated_on>
+        <table>x_976837_warrant_0_claims</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</application>
+        <file_path/>
+        <instance_id>0a5566f9db0ba410c6e711f8489619c6</instance_id>
+        <instance_name>dev108011</instance_name>
+        <name>sys_script_client_00ae680347bf211008c85088c26d43e6</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;u_wm_order&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;auto update customer name &lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+        var worder = g_form.getValue('u_wm_order');
+
+    var pc = new GlideAjax('autopopcompound');
+    pc.addParam('sysparm_name', 'companyname'); // call the function
+    pc.addParam('sysparm_company', worder); // pass in userID
+    pc.getXML(responseParser);
+
+    function responseParser(response) {
+        var answer = response.responseXML.documentElement.getAttribute('answer');
+        answer = JSON.parse(answer);
+	// 	g_form.addErrorMessage(answer);
+    //     var company = answer["company"];
+    //     var failuredate = answer["failuredate"];
+    //     var asset = answer["asset"];
+    //     var componentcode = answer["componentcode"];
+		
+	// 	g_form.addInfoMessage(company);
+    //     g_form.setValue('u_customer_name', company);
+    //     g_form.setValue('u_failure_date', failuredate);
+    //     g_form.setValue('u_equipment', asset);
+	// 	g_form.setValue('u_component_code',componentcode);
+        
+    }
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-07-07 09:07:15&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;00ae680347bf211008c85088c26d43e6&lt;/sys_id&gt;&lt;sys_mod_count&gt;20&lt;/sys_mod_count&gt;&lt;sys_name&gt;auto update customer name &lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Warranty Claims" source="x_976837_warrant_0"&gt;488bf91a4773211008c85088c26d4304&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Warranty Claims"&gt;488bf91a4773211008c85088c26d4304&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_00ae680347bf211008c85088c26d43e6&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-07-19 04:51:21&lt;/sys_updated_on&gt;&lt;table&gt;x_976837_warrant_0_claims&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-628824196</payload_hash>
+        <record_name>auto update customer name </record_name>
+        <reverted_from/>
+        <source>5581977b47b3211008c85088c26d43ab</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-19 04:51:21</sys_created_on>
+        <sys_id>9657a17647c4711008c85088c26d43a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1896c7d0a230000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-19 04:51:21</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>5e57a176c8c471101d0ff15da86347a6</update_guid>
+        <update_guid_history>5e57a176c8c471101d0ff15da86347a6:-628824196,6937a17638c47110ba5f9f4eb2f610a2:-1740485954,c666e17214c47110e2d4d0b19eacff8e:-514144508,2e93e17237c471104e6827743c1bc885:-1984004188,8672edfece847110a49eff141966e19a:-299951583,df42a1fa06847110e349dbb3f55bd970:1413139401,ea9af3f75b772110a34d73b96673614d:-570681609,4f6af3b74977211099ae9a55098a27c2:349972090,bfa7b7f372772110d4b22f81d76788db:1453890571,46863fb354772110978de82794a3835c:-1470567809,4f36b7b3cb77211013d6290a144deaa0:-1495728466,a716f3ff47372110e0db7154e7007c8b:1543689621,5d23b7bf0c372110783ea8aaadfab035:-2082001264,78d077f3ed372110e90f495bb6b8bf1a:-1410790410,7f80773ffa372110327c37c88472e7d9:-1817798122,c5afa7fba5372110045bafb2315afb01:-2082001264,d6dee73b65372110ed0fe1cd83f687a1:1286155767,cf5deb3b75372110ffe135adfb633298:1194125205,c4c1633ff6f3211089cda59b5b76a28c:1743720377,957fdf7b2cf32110653c28780ac9dbaa:1976841885,21de6c0385bf2110985a1984f0824e9a:-570681609</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-20 05:03:09</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>1888e2513b32498e8aa01c860d62ac89</sys_id>
+        <sys_metadata>00ae680347bf211008c85088c26d43e6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>auto update customer name </sys_name>
+        <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
+        <sys_parent display_value="Warranty Claims">4efcb19a4773211008c85088c26d43b9</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
+        <sys_scope_delete display_value="">03b44be4edf34a389289e20b091d72c1</sys_scope_delete>
+        <sys_update_name>sys_script_client_00ae680347bf211008c85088c26d43e6</sys_update_name>
+        <sys_update_version display_value="sys_script_client_00ae680347bf211008c85088c26d43e6">9657a17647c4711008c85088c26d43a7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-20 05:03:09</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

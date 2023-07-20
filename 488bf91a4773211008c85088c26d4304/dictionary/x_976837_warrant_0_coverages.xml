@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="5a57223e978c3110db91f0a0f053af27" label="Coverages" max_length="40" name="x_976837_warrant_0_coverages" type="collection">
-        <element dynamic_ref_qual="9c10767697cc3110db91f0a0f053af5f" label="Asset Covered" max_length="32" name="asset_covered" reference="clm_m2m_contract_asset" reference_qual="javascript:contract==current.getValue(u_contract)" type="reference" use_reference_qualifier="dynamic"/>
-        <element label="Component" max_length="32" name="component" reference="cmdb_m2m_model_component" type="reference"/>
-        <element label="Contract" max_length="32" name="contract" read_only="true" reference="ast_contract" type="reference"/>
-        <element label="End Date" max_length="40" name="end_date" type="glide_date"/>
-        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Start Date" max_length="40" name="start_date" type="glide_date"/>
+    <element db_object_id="1c77bb0c4744711008c85088c26d4375" label="Coverages" max_length="40" name="x_976837_warrant_0_coverages" type="collection">
+        <element attributes="encode_utf8=false" label="Component" max_length="32" name="u_component" reference="cmdb_m2m_model_component" type="reference"/>
+        <element attributes="encode_utf8=false" label="Contract" max_length="32" name="u_contract" read_only="true" reference="ast_contract" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="End Date" max_length="40" name="u_end_date" type="glide_date"/>
+        <element attributes="encode_utf8=false" dependent="u_contract" dependent_on_field="u_contract" label="Asset Covered" max_length="32" name="u_model_components" reference="clm_m2m_contract_asset" type="reference" use_dependent_field="true"/>
+        <element attributes="edge_encryption_enabled=true" label="Start Date" max_length="40" name="u_start_date" type="glide_date"/>
         <index name="index">
-            <element name="asset_covered"/>
+            <element name="u_component"/>
         </index>
         <index name="index2">
-            <element name="component"/>
+            <element name="u_contract"/>
         </index>
         <index name="index3">
-            <element name="contract"/>
+            <element name="u_model_components"/>
         </index>
     </element>
 </database>

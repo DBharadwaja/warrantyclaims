@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_976837_warrant_0.ref_wot_for_parts</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>ref_wot_for_parts</name>
+        <script><![CDATA[var ref_wot_for_parts = Class.create();
+ref_wot_for_parts.prototype = {
+    initialize: function() {},
+    getreferenceworkorder: function() {
+        var getworkorder = current.u_claimworkordertask.number;
+        var getder = current.u_claimworkordertask;
+        var dateTimeStr = current.u_claimworkordertask.opened_at;
+        var dateArr = dateTimeStr.split(' ');
+        var date = dateArr[0];
+        //         gs.addInfoMessage(date);
+        var answer = {};
+        var rec = new GlideRecord('sm_asset_usage');
+        rec.addQuery('service_order_task', getder);
+        rec.query();
+        while (rec.next()) {
+            var aftpro = rec.affected_product.getDisplayValue();
+            //             gs.addInfoMessage(aftpro + "  affected_product");
+            var model = rec.model.getDisplayValue();
+            //                         gs.addInfoMessage(rec.model.getDisplayValue());
+            var almhard = new GlideRecord('alm_hardware');
+            almhard.addQuery('display_name', aftpro);
+            almhard.query();
+            while (almhard.next()) {
+                //                 gs.addErrorMessage(almhard.sys_id);
+                var almharddpv = almhard.sys_id;
+                var contracts = new GlideRecord('clm_m2m_contract_asset');
+                contracts.addQuery('asset', almharddpv);
+                contracts.query();
+                while (contracts.next()) {
+                    // 					gs.addInfoMessage(contracts.contract);
+                    var contractslist = contracts.contract;
+                    var almcontract = new GlideRecord('ast_contract');
+                    almcontract.addQuery('sys_id', contractslist);
+                    almcontract.query();
+                    while (almcontract.next()) {
+                        //                         gs.addInfoMessage(almcontract.sys_id);
+                        //                         gs.addInfoMessage(almcontract.short_description);
+                        var almvendor = almcontract.sys_id;
+                        var coverages = new GlideRecord('u_mfg_coverages');
+                        coverages.addQuery('u_contract', almvendor);
+                        coverages.query();
+                        partsvalues = '';
+                        while (coverages.next()) {
+                            var cvr = coverages.u_component.getDisplayValue();
+                            if (cvr == model) {
+                                var dateTime = gs.dateDiff(date, coverages.u_end_date, false);
+                                var caldate = dateTime.split(' ');
+                                var noofdays = caldate[0];
+                                //                                 gs.addInfoMessage(noofdays);
+                                if (noofdays > 0) {
+                                    partsvalues += ',' + rec.sys_id;
+                                }
+                                return 'sys_idIN' + partsvalues;
+                            }
+                            //                             if (date > coverages.u_end_date) {
+                            //                                 gs.addInfoMessage(coverages.u_model_components.getDisplayValue() + "  Component : " + coverages.u_component.getDisplayValue() + " Start Date : " + coverages.u_start_date + " End date :" + coverages.u_end_date);
+                            //                             }
+                        }
+                    }
+                }
+
+            }
+
+        }
+        //         var workordr = new GlideRecord('sm_asset_usage');
+        //         workordr.addQuery('service_order_task.number', getworkorder);
+        // 		workordr.addQuery("model.cmdb_model_category", "!=", "9228241b070da1103941f1d08c1ed004");
+        //         workordr.query();
+        //         partsvalues = '';
+        //         while (workordr.next()) {
+        // //             gs.addErrorMessage(workordr.service_order_task.number);
+        //             partsvalues+= ',' +workordr.sys_id;
+        //         }
+        //         return 'sys_idIN' +partsvalues;
+    },
+
+    type: 'ref_wot_for_parts'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-07 08:50:03</sys_created_on>
+        <sys_id>07caac8b477f211008c85088c26d435c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ref_wot_for_parts</sys_name>
+        <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
+        <sys_update_name>sys_script_include_07caac8b477f211008c85088c26d435c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-07 08:50:03</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</application>
+        <file_path/>
+        <instance_id>0a5566f9db0ba410c6e711f8489619c6</instance_id>
+        <instance_name>dev108011</instance_name>
+        <name>sys_script_include_07caac8b477f211008c85088c26d435c</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_976837_warrant_0.ref_wot_for_parts&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;ref_wot_for_parts&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var ref_wot_for_parts = Class.create();
+ref_wot_for_parts.prototype = {
+    initialize: function() {},
+    getreferenceworkorder: function() {
+        var getworkorder = current.u_claimworkordertask.number;
+        var getder = current.u_claimworkordertask;
+        var dateTimeStr = current.u_claimworkordertask.opened_at;
+        var dateArr = dateTimeStr.split(' ');
+        var date = dateArr[0];
+        //         gs.addInfoMessage(date);
+        var answer = {};
+        var rec = new GlideRecord('sm_asset_usage');
+        rec.addQuery('service_order_task', getder);
+        rec.query();
+        while (rec.next()) {
+            var aftpro = rec.affected_product.getDisplayValue();
+            //             gs.addInfoMessage(aftpro + "  affected_product");
+            var model = rec.model.getDisplayValue();
+            //                         gs.addInfoMessage(rec.model.getDisplayValue());
+            var almhard = new GlideRecord('alm_hardware');
+            almhard.addQuery('display_name', aftpro);
+            almhard.query();
+            while (almhard.next()) {
+                //                 gs.addErrorMessage(almhard.sys_id);
+                var almharddpv = almhard.sys_id;
+                var contracts = new GlideRecord('clm_m2m_contract_asset');
+                contracts.addQuery('asset', almharddpv);
+                contracts.query();
+                while (contracts.next()) {
+                    // 					gs.addInfoMessage(contracts.contract);
+                    var contractslist = contracts.contract;
+                    var almcontract = new GlideRecord('ast_contract');
+                    almcontract.addQuery('sys_id', contractslist);
+                    almcontract.query();
+                    while (almcontract.next()) {
+                        //                         gs.addInfoMessage(almcontract.sys_id);
+                        //                         gs.addInfoMessage(almcontract.short_description);
+                        var almvendor = almcontract.sys_id;
+                        var coverages = new GlideRecord('u_mfg_coverages');
+                        coverages.addQuery('u_contract', almvendor);
+                        coverages.query();
+                        partsvalues = '';
+                        while (coverages.next()) {
+                            var cvr = coverages.u_component.getDisplayValue();
+                            if (cvr == model) {
+                                var dateTime = gs.dateDiff(date, coverages.u_end_date, false);
+                                var caldate = dateTime.split(' ');
+                                var noofdays = caldate[0];
+                                //                                 gs.addInfoMessage(noofdays);
+                                if (noofdays &gt; 0) {
+                                    partsvalues += ',' + rec.sys_id;
+                                }
+                                return 'sys_idIN' + partsvalues;
+                            }
+                            //                             if (date &gt; coverages.u_end_date) {
+                            //                                 gs.addInfoMessage(coverages.u_model_components.getDisplayValue() + "  Component : " + coverages.u_component.getDisplayValue() + " Start Date : " + coverages.u_start_date + " End date :" + coverages.u_end_date);
+                            //                             }
+                        }
+                    }
+                }
+
+            }
+
+        }
+        //         var workordr = new GlideRecord('sm_asset_usage');
+        //         workordr.addQuery('service_order_task.number', getworkorder);
+        // 		workordr.addQuery("model.cmdb_model_category", "!=", "9228241b070da1103941f1d08c1ed004");
+        //         workordr.query();
+        //         partsvalues = '';
+        //         while (workordr.next()) {
+        // //             gs.addErrorMessage(workordr.service_order_task.number);
+        //             partsvalues+= ',' +workordr.sys_id;
+        //         }
+        //         return 'sys_idIN' +partsvalues;
+    },
+
+    type: 'ref_wot_for_parts'
+};]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-07-07 08:50:03&lt;/sys_created_on&gt;&lt;sys_id&gt;07caac8b477f211008c85088c26d435c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;ref_wot_for_parts&lt;/sys_name&gt;&lt;sys_package display_value="Warranty Claims" source="x_976837_warrant_0"&gt;488bf91a4773211008c85088c26d4304&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Warranty Claims"&gt;488bf91a4773211008c85088c26d4304&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_07caac8b477f211008c85088c26d435c&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-07-07 08:50:03&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>775264882</payload_hash>
+        <record_name>ref_wot_for_parts</record_name>
+        <reverted_from/>
+        <source>188bf91a4773211008c85088c26d4306</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-07 08:50:03</sys_created_on>
+        <sys_id>65eaec8b477f211008c85088c26d4321</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1892f8b433e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-07 08:50:03</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>a9eaec8b7b7f21105965eb045038fa20</update_guid>
+        <update_guid_history>a9eaec8b7b7f21105965eb045038fa20:775264882</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-20 05:01:16</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>0063296ad9a546dc8002251419e42f64</sys_id>
+        <sys_metadata>07caac8b477f211008c85088c26d435c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ref_wot_for_parts</sys_name>
+        <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
+        <sys_scope_delete display_value="">03b44be4edf34a389289e20b091d72c1</sys_scope_delete>
+        <sys_update_name>sys_script_include_07caac8b477f211008c85088c26d435c</sys_update_name>
+        <sys_update_version display_value="sys_script_include_07caac8b477f211008c85088c26d435c">65eaec8b477f211008c85088c26d4321</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-20 05:01:16</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

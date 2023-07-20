@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_976837_warrant_0.workordervalues</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>workordervalues</name>
+        <script><![CDATA[var workordervalues = Class.create();
+workordervalues.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    wodetails: function() {
+        var wosys_id = this.getParameter('sysparm_order');
+        var returndata = {};
+        var wodata = new GlideRecord('wm_order');
+        wodata.addQuery('sys_id', wosys_id);
+        wodata.query();
+        if(wodata.next()) {
+            returndata.company = wodata.company.getDisplayValue();
+            returndata.opendate = wodata.opened_at.getDisplayValue();
+			returndata.asset = wodata.asset.toString();
+			returndata.componentcode = wodata.asset.model_category.getDisplayValue();
+        }
+        return new global.JSON().encode(returndata);
+    },
+    type: 'workordervalues'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-20 05:39:49</sys_created_on>
+        <sys_id>ae9b76474740311008c85088c26d4305</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>workordervalues</sys_name>
+        <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
+        <sys_update_name>sys_script_include_ae9b76474740311008c85088c26d4305</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-20 06:21:46</sys_updated_on>
+    </sys_script_include>
+</record_update>

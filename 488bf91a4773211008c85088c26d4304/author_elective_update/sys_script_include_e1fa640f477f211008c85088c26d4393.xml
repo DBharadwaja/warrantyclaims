@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_976837_warrant_0.updatepartfields</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>updating the parts field based on work order task.</description>
+        <name>updatepartfields</name>
+        <script><![CDATA[var updatepartfields = Class.create();
+updatepartfields.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    workorderparts: function() {
+        var userID = this.getParameter('sysparm_wo_task');
+        var sysID = this.getParameter('syspar_sys_id');
+        var claimid = this.getParameter('syspar_claimid');
+        var eqpname = this.getParameter('syspar_eqp');
+        var syspar_serial = this.getParameter('syspar_eqp_serial');
+
+        var answer = {};
+        var rec = new GlideRecord('sm_asset_usage');
+        rec.addQuery('service_order_task', sysID);
+        rec.query();
+        while (rec.next()) {
+            var aftpro = rec.affected_product.getDisplayValue();
+            var assetcov = new GlideRecord('clm_m2m_contract_asset');
+            var wotast = assetcov.asset.getDisplayValue();
+            assetcov.addQuery(wotast, aftpro);
+            assetcov.query();
+            while (assetcov.next()) {
+                gs.addErrorMessage('used');
+                gs.addErrorMessage(assetcov.contract);
+                // 					}
+                //                     if (assetcov.asset == aftpro) { asset=7087eaa04776a110d02a41fe436d43e5
+                //gs.addInfoMessage(assetcov.asset.getDisplayValue());
+                // 					gs.addInfoMessage(assetcov.affected_product.getDisplayValue());
+                // 					affected_product
+                // gs.addErrorMessage(assetcov.contract.getDisplayValue());
+            }
+
+
+
+
+
+
+
+            //                         if (assetx != "MFG_AC_Coolant") {
+            //                     gs.addInfoMessage(rec.asset.getDisplayValue());
+            //                     gs.addInfoMessage(rec.name.toString());
+            //                 //                     gs.addErrorMessage(rec.model.toString() + "name"); //mfg test
+            //                 gs.addErrorMessage(rec.model.name + "name"); //mfg test
+            //                     gs.addInfoMessage(rec.model.name.toString() + "d"); //mfg test
+            //                     gs.addErrorMessage(rec.model.name.getDisplayValue() + "i"); //mfg test
+            //                     gs.addInfoMessage(rec.quantity.getDisplayValue());
+            //                     gs.addErrorMessage(rec.status);
+
+            //                     answer["affectedmodel"] = rec.name.toString();
+            // 					answer['shortdesp'] = rec.model.short_description.getDisplayValue();
+            //                     answer["model"] = rec.model.toString();
+            // 					answer["model_name"] = rec.model.name.toString();
+            //                     answer["quantity"] = rec.quantity.getDisplayValue();
+            //                     answer["status"] = rec.status.getDisplayValue();
+            //                     answer["asset"] = rec.asset.toString();
+            // 					answer['workorder'] = sysID;
+
+
+            //                     var incGr = new GlideRecord('u_mfg_parts');
+            //                     incGr.initialize(); // initialize the incGr object
+            // 					incGr.u_partsquantity = rec.quantity.getDisplayValue();
+            // 					incGr.u_partsasset = rec.model.name.toString();
+            // 					incGr.u_partsstatus= rec.status.getDisplayValue();
+            //                     incGr.u_claim_id = claimid;
+            //                     incGr.insert();
+            // // 					gs.addErrorMessage(claimid);
+            //                 }
+            //                 gs.addInfoMessage(rec.name.toString());
+            // 				gs.addErrorMessage(rec.model.short_description.getDisplayValue());
+            // 				gs.addInfoMessage(rec.quantity.getDisplayValue());
+            // 				gs.addErrorMessage(rec.status);
+        }
+        //                 }
+        // 	}
+        //             }
+        //         }
+        return new JSON().encode(answer);
+    },
+    type: 'updatepartfields'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-07 08:51:36</sys_created_on>
+        <sys_id>e1fa640f477f211008c85088c26d4393</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>updatepartfields</sys_name>
+        <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
+        <sys_update_name>sys_script_include_e1fa640f477f211008c85088c26d4393</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-07 08:52:09</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</application>
+        <file_path/>
+        <instance_id>0a5566f9db0ba410c6e711f8489619c6</instance_id>
+        <instance_name>dev108011</instance_name>
+        <name>sys_script_include_e1fa640f477f211008c85088c26d4393</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_976837_warrant_0.updatepartfields&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description&gt;updating the parts field based on work order task.&lt;/description&gt;&lt;name&gt;updatepartfields&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var updatepartfields = Class.create();
+updatepartfields.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    workorderparts: function() {
+        var userID = this.getParameter('sysparm_wo_task');
+        var sysID = this.getParameter('syspar_sys_id');
+        var claimid = this.getParameter('syspar_claimid');
+        var eqpname = this.getParameter('syspar_eqp');
+        var syspar_serial = this.getParameter('syspar_eqp_serial');
+
+        var answer = {};
+        var rec = new GlideRecord('sm_asset_usage');
+        rec.addQuery('service_order_task', sysID);
+        rec.query();
+        while (rec.next()) {
+            var aftpro = rec.affected_product.getDisplayValue();
+            var assetcov = new GlideRecord('clm_m2m_contract_asset');
+            var wotast = assetcov.asset.getDisplayValue();
+            assetcov.addQuery(wotast, aftpro);
+            assetcov.query();
+            while (assetcov.next()) {
+                gs.addErrorMessage('used');
+                gs.addErrorMessage(assetcov.contract);
+                // 					}
+                //                     if (assetcov.asset == aftpro) { asset=7087eaa04776a110d02a41fe436d43e5
+                //gs.addInfoMessage(assetcov.asset.getDisplayValue());
+                // 					gs.addInfoMessage(assetcov.affected_product.getDisplayValue());
+                // 					affected_product
+                // gs.addErrorMessage(assetcov.contract.getDisplayValue());
+            }
+
+
+
+
+
+
+
+            //                         if (assetx != "MFG_AC_Coolant") {
+            //                     gs.addInfoMessage(rec.asset.getDisplayValue());
+            //                     gs.addInfoMessage(rec.name.toString());
+            //                 //                     gs.addErrorMessage(rec.model.toString() + "name"); //mfg test
+            //                 gs.addErrorMessage(rec.model.name + "name"); //mfg test
+            //                     gs.addInfoMessage(rec.model.name.toString() + "d"); //mfg test
+            //                     gs.addErrorMessage(rec.model.name.getDisplayValue() + "i"); //mfg test
+            //                     gs.addInfoMessage(rec.quantity.getDisplayValue());
+            //                     gs.addErrorMessage(rec.status);
+
+            //                     answer["affectedmodel"] = rec.name.toString();
+            // 					answer['shortdesp'] = rec.model.short_description.getDisplayValue();
+            //                     answer["model"] = rec.model.toString();
+            // 					answer["model_name"] = rec.model.name.toString();
+            //                     answer["quantity"] = rec.quantity.getDisplayValue();
+            //                     answer["status"] = rec.status.getDisplayValue();
+            //                     answer["asset"] = rec.asset.toString();
+            // 					answer['workorder'] = sysID;
+
+
+            //                     var incGr = new GlideRecord('u_mfg_parts');
+            //                     incGr.initialize(); // initialize the incGr object
+            // 					incGr.u_partsquantity = rec.quantity.getDisplayValue();
+            // 					incGr.u_partsasset = rec.model.name.toString();
+            // 					incGr.u_partsstatus= rec.status.getDisplayValue();
+            //                     incGr.u_claim_id = claimid;
+            //                     incGr.insert();
+            // // 					gs.addErrorMessage(claimid);
+            //                 }
+            //                 gs.addInfoMessage(rec.name.toString());
+            // 				gs.addErrorMessage(rec.model.short_description.getDisplayValue());
+            // 				gs.addInfoMessage(rec.quantity.getDisplayValue());
+            // 				gs.addErrorMessage(rec.status);
+        }
+        //                 }
+        // 	}
+        //             }
+        //         }
+        return new JSON().encode(answer);
+    },
+    type: 'updatepartfields'
+});]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-07-07 08:51:36&lt;/sys_created_on&gt;&lt;sys_id&gt;e1fa640f477f211008c85088c26d4393&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;updatepartfields&lt;/sys_name&gt;&lt;sys_package display_value="Warranty Claims" source="x_976837_warrant_0"&gt;488bf91a4773211008c85088c26d4304&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Warranty Claims"&gt;488bf91a4773211008c85088c26d4304&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_e1fa640f477f211008c85088c26d4393&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-07-07 08:52:09&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-46618842</payload_hash>
+        <record_name>updatepartfields</record_name>
+        <reverted_from/>
+        <source>188bf91a4773211008c85088c26d4306</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-07 08:52:09</sys_created_on>
+        <sys_id>5c6b640f477f211008c85088c26d436d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1892f8d2f3c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-07 08:52:09</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>546b640f2a7f21101c9eb81eeb09386d</update_guid>
+        <update_guid_history>546b640f2a7f21101c9eb81eeb09386d:-46618842,e84b204f187f2110b59e1d73eb53aa59:2080642400</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-20 05:01:17</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>258ed87a118b4af09a5c48a98fec7900</sys_id>
+        <sys_metadata>e1fa640f477f211008c85088c26d4393</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>updatepartfields</sys_name>
+        <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
+        <sys_scope_delete display_value="">03b44be4edf34a389289e20b091d72c1</sys_scope_delete>
+        <sys_update_name>sys_script_include_e1fa640f477f211008c85088c26d4393</sys_update_name>
+        <sys_update_version display_value="sys_script_include_e1fa640f477f211008c85088c26d4393">5c6b640f477f211008c85088c26d436d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-20 05:01:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

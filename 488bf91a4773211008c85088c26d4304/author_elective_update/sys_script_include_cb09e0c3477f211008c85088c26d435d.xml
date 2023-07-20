@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_976837_warrant_0.autopopcompound</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>used to populate compound code</description>
+        <name>autopopcompound</name>
+        <script><![CDATA[var autopopcompound = Class.create();
+autopopcompound.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    companyname: function() {
+        var company = this.getParameter('sysparm_company');
+        var answer = {};
+        var rec = new GlideRecord('wm_order');
+        rec.query();
+        while (rec.next()) {
+            if (company == rec.sys_id) {
+                gs.addInfoMessage(rec.company + rec.company.name + rec.opened_at);
+                //                 answer["company"] = rec.company.toString();
+                answer["company"] = rec.company.getDisplayValue();
+                answer["failuredate"] = rec.opened_at.getDisplayValue();
+                answer["asset"] = rec.asset.toString();
+                answer["componentcode"] = rec.asset.model_category.getDisplayValue();
+            }
+        }
+        return new JSON().encode(answer);
+    },
+    // Myfunc: function() {
+    //     var userID = this.getParameter('sysparm_my_userid');
+    //     var rec = new GlideRecord('alm_asset');
+    //     rec.query();
+    //     while (rec.next()) {
+    //         if (userID == rec.sys_id) {
+    //             // 				gs.addInfoMessage("inside if");
+    //             var total = rec.model_category.getDisplayValue();
+    //         }
+    //     }
+    //     return total;
+    // },
+    // Mysrt: function() {
+    //     var srtID = this.getParameter('sysparm_my_userid');
+    //     var partout = {};
+
+    //     var srtcode = new GlideRecord('rate_type');
+    //     srtcode.query();
+    //     while (srtcode.next()) {
+    //         if (srtID == srtcode.sys_id) {
+    //             var total = srtcode.description.getDisplayValue();
+    //         }
+    //     }
+    //     return total;
+
+    //     //                 //                 gs.addInfoMessage("inside if");
+    //     //                 partout["description"] = srtcode.rate_type.description.getDisplayValue();
+    //     //                partout["rate_type"] = srtcode.rate_type.getDisplayValue();
+    //     //             }
+    //     //         }
+    //     //         return new JSON().encode(partout);
+    // },
+    // Mypart: function() {
+    //     var partID = this.getParameter('sysparm_my_userid');
+    //     var answer = {};
+
+    //     var part = new GlideRecord('alm_asset');
+    //     part.query();
+    //     while (part.next()) {
+    //         if (partID == part.sys_id) {
+    //             var total = part.model_category.getDisplayValue();
+    //         }
+    //     }
+    //     return total;
+    //     //                 answer["model"] = part.model_category.getDisplayValue();
+    //     //                 answer["quality"] = part.quantity.getDisplayValue();
+    //     //             }
+    //     //         }
+    //     //         return new JSON().encode(answer);
+    // },
+    type: 'autopopcompound'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-07 08:43:09</sys_created_on>
+        <sys_id>cb09e0c3477f211008c85088c26d435d</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name>autopopcompound</sys_name>
+        <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
+        <sys_update_name>sys_script_include_cb09e0c3477f211008c85088c26d435d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-19 04:36:36</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</application>
+        <file_path/>
+        <instance_id>0a5566f9db0ba410c6e711f8489619c6</instance_id>
+        <instance_name>dev108011</instance_name>
+        <name>sys_script_include_cb09e0c3477f211008c85088c26d435d</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_976837_warrant_0.autopopcompound&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description&gt;used to populate compound code&lt;/description&gt;&lt;name&gt;autopopcompound&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var autopopcompound = Class.create();
+autopopcompound.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    companyname: function() {
+        var company = this.getParameter('sysparm_company');
+        var answer = {};
+        var rec = new GlideRecord('wm_order');
+        rec.query();
+        while (rec.next()) {
+            if (company == rec.sys_id) {
+                gs.addInfoMessage(rec.company + rec.company.name + rec.opened_at);
+                //                 answer["company"] = rec.company.toString();
+                answer["company"] = rec.company.getDisplayValue();
+                answer["failuredate"] = rec.opened_at.getDisplayValue();
+                answer["asset"] = rec.asset.toString();
+                answer["componentcode"] = rec.asset.model_category.getDisplayValue();
+            }
+        }
+        return new JSON().encode(answer);
+    },
+    // Myfunc: function() {
+    //     var userID = this.getParameter('sysparm_my_userid');
+    //     var rec = new GlideRecord('alm_asset');
+    //     rec.query();
+    //     while (rec.next()) {
+    //         if (userID == rec.sys_id) {
+    //             // 				gs.addInfoMessage("inside if");
+    //             var total = rec.model_category.getDisplayValue();
+    //         }
+    //     }
+    //     return total;
+    // },
+    // Mysrt: function() {
+    //     var srtID = this.getParameter('sysparm_my_userid');
+    //     var partout = {};
+
+    //     var srtcode = new GlideRecord('rate_type');
+    //     srtcode.query();
+    //     while (srtcode.next()) {
+    //         if (srtID == srtcode.sys_id) {
+    //             var total = srtcode.description.getDisplayValue();
+    //         }
+    //     }
+    //     return total;
+
+    //     //                 //                 gs.addInfoMessage("inside if");
+    //     //                 partout["description"] = srtcode.rate_type.description.getDisplayValue();
+    //     //                partout["rate_type"] = srtcode.rate_type.getDisplayValue();
+    //     //             }
+    //     //         }
+    //     //         return new JSON().encode(partout);
+    // },
+    // Mypart: function() {
+    //     var partID = this.getParameter('sysparm_my_userid');
+    //     var answer = {};
+
+    //     var part = new GlideRecord('alm_asset');
+    //     part.query();
+    //     while (part.next()) {
+    //         if (partID == part.sys_id) {
+    //             var total = part.model_category.getDisplayValue();
+    //         }
+    //     }
+    //     return total;
+    //     //                 answer["model"] = part.model_category.getDisplayValue();
+    //     //                 answer["quality"] = part.quantity.getDisplayValue();
+    //     //             }
+    //     //         }
+    //     //         return new JSON().encode(answer);
+    // },
+    type: 'autopopcompound'
+});]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-07-07 08:43:09&lt;/sys_created_on&gt;&lt;sys_id&gt;cb09e0c3477f211008c85088c26d435d&lt;/sys_id&gt;&lt;sys_mod_count&gt;20&lt;/sys_mod_count&gt;&lt;sys_name&gt;autopopcompound&lt;/sys_name&gt;&lt;sys_package display_value="Warranty Claims" source="x_976837_warrant_0"&gt;488bf91a4773211008c85088c26d4304&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Warranty Claims"&gt;488bf91a4773211008c85088c26d4304&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_cb09e0c3477f211008c85088c26d435d&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-07-19 04:36:36&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>642145987</payload_hash>
+        <record_name>autopopcompound</record_name>
+        <reverted_from/>
+        <source>5581977b47b3211008c85088c26d43ab</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-19 04:36:36</sys_created_on>
+        <sys_id>5af3693247c4711008c85088c26d4328</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1896c6f88d30000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-19 04:36:36</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>12f36932a5c471109a63d79858769928</update_guid>
+        <update_guid_history>12f36932a5c471109a63d79858769928:642145987,71f2edbeb18471105a6340abdec52bcd:814578215,ca92adfeeb8471102db4642bf3261840:848673563,6bed1dba7d84711009ff429ca946ddc8:2041713803,851a7f777b772110d1c795f5b1490dd8:848673563,43a97f77c277211048024c6187fb29d3:624806641,4a17b7f3ba77211082b08f880ad1a090:377127421,95f677b34d772110ea34a77e9105a794:-1869253317,76c63bb3a47721102fe2cbef7e4fb434:-757256263,c17fefbbc83721102bf840a081d1e8b4:1778569898,9c4fefbbb63721108bc2b2ce4384130e:655797681,56be6bbf6cf321105de7d3a33d0ef973:-1962671968,cebdeb3b4f37211017984a909c18159d:505381840,833d2f3fb1f321100d48e42ffcecbbe0:256843628,24a1ebfb21f321100696f9f8611c30d2:-1221091266,4a61a73fc0f321106af333be64345d62:678756386,21c06fbb5af321108d355c4708df1809:435696648,de80afbb23f32110625f668bb31f7685:630499696,7c302fbbfdf32110b87eca6a5ff6c1c7:-1032219412,ecd96c8b603f211045b19ca61c3dbf25:1482310197,7c59ac8b477f2110f5529ed65b17acac:-1765856491</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-20 05:01:17</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>03202fcadbb54948832b903f1ee6ec10</sys_id>
+        <sys_metadata>cb09e0c3477f211008c85088c26d435d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>autopopcompound</sys_name>
+        <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
+        <sys_scope_delete display_value="">03b44be4edf34a389289e20b091d72c1</sys_scope_delete>
+        <sys_update_name>sys_script_include_cb09e0c3477f211008c85088c26d435d</sys_update_name>
+        <sys_update_version display_value="sys_script_include_cb09e0c3477f211008c85088c26d435d">5af3693247c4711008c85088c26d4328</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-20 05:01:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
