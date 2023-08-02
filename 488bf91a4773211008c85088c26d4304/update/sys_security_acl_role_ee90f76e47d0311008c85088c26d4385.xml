@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-31 06:28:39</sys_created_on>
+        <sys_id>ee90f76e47d0311008c85088c26d4385</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_976837_warrant_0.dealer</sys_name>
+        <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
+        <sys_security_acl display_value="wm_task">1e807f2e47d0311008c85088c26d4318</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_ee90f76e47d0311008c85088c26d4385</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-31 06:28:39</sys_updated_on>
+        <sys_user_role display_value="x_976837_warrant_0.dealer" name="x_976837_warrant_0.dealer">188bf91a4773211008c85088c26d4314</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

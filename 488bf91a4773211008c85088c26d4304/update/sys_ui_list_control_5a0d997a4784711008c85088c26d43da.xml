@@ -35,7 +35,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5a0d997a4784711008c85088c26d43da</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>x_976837_warrant_0_claims</sys_name>
         <sys_overrides display_value="">global</sys_overrides>
         <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
@@ -43,6 +43,6 @@
         <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
         <sys_update_name>sys_ui_list_control_5a0d997a4784711008c85088c26d43da</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-19 04:06:26</sys_updated_on>
+        <sys_updated_on>2023-08-01 05:28:44</sys_updated_on>
     </sys_ui_list_control>
 </record_update>
