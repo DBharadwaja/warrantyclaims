@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_976837_warrant_0.autopopcompound</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>autopopcompound</name>
+        <script><![CDATA[var autopopcompound = Class.create();
+autopopcompound.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+ companyname: function() {
+        var company = this.getParameter('sysparm_company');
+        var answer = {};
+        var rec = new GlideRecord('wm_order');
+        rec.query();
+        while (rec.next()) {
+            if (company == rec.sys_id) {
+// 				gs.addInfoMessage(rec.company + rec.company.name+ rec.opened_at);
+//                 answer["company"] = rec.company.toString();
+                answer["company"] = rec.company.getDisplayValue();
+                answer["failuredate"] = rec.opened_at.getDisplayValue();
+				answer["asset"] = rec.asset.toString();
+				answer["componentcode"] = rec.asset.model_category.getDisplayValue();
+            }
+        }
+        return new JSON().encode(answer);
+    },
+    Myfunc: function() {
+        var userID = this.getParameter('sysparm_my_userid');
+        var rec = new GlideRecord('alm_asset');
+        rec.query();
+        while (rec.next()) {
+            if (userID == rec.sys_id) {
+                // 				gs.addInfoMessage("inside if");
+                var total = rec.model_category.getDisplayValue();
+            }
+        }
+        return total;
+    },
+    Mysrt: function() {
+        var srtID = this.getParameter('sysparm_my_userid');
+        var partout = {};
+
+        var srtcode = new GlideRecord('rate_type');
+        srtcode.query();
+        while (srtcode.next()) {
+            if (srtID == srtcode.sys_id) {
+                var total = srtcode.description.getDisplayValue();
+            }
+        }
+        return total;
+
+        //                 //                 gs.addInfoMessage("inside if");
+        //                 partout["description"] = srtcode.rate_type.description.getDisplayValue();
+        //                partout["rate_type"] = srtcode.rate_type.getDisplayValue();
+        //             }
+        //         }
+        //         return new JSON().encode(partout);
+    },
+    Mypart: function() {
+        var partID = this.getParameter('sysparm_my_userid');
+        var answer = {};
+
+        var part = new GlideRecord('alm_asset');
+        part.query();
+        while (part.next()) {
+            if (partID == part.sys_id) {
+                var total = part.model_category.getDisplayValue();
+            }
+        }
+        return total;
+        //                 answer["model"] = part.model_category.getDisplayValue();
+        //                 answer["quality"] = part.quantity.getDisplayValue();
+        //             }
+        //         }
+        //         return new JSON().encode(answer);
+    },
+    type: 'autopopcompound'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-29 08:28:49</sys_created_on>
+        <sys_id>164dd15147880e9008c85088c26d431d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>autopopcompound</sys_name>
+        <sys_package display_value="Warranty Claims" source="x_976837_warrant_0">488bf91a4773211008c85088c26d4304</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Warranty Claims">488bf91a4773211008c85088c26d4304</sys_scope>
+        <sys_update_name>sys_script_include_164dd15147880e9008c85088c26d431d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-29 08:36:02</sys_updated_on>
+    </sys_script_include>
+</record_update>
